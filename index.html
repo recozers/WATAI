@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive World Globe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/globe.gl"></script>
+</head>
+<body>
+    <div id="globeContainer"></div>
+
+    <div id="infoPanel" class="info-panel hidden">
+        <button id="closePanel" class="close-btn">&times;</button>
+        <div id="infoPanelContent"></div>
+    </div>
+
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search countries or cities...">
+        <div id="searchResults" class="search-results hidden"></div>
+    </div>
+
+    <div id="legend">
+        <h3>World Explorer</h3>
+        <p>Click on countries or cities to learn more</p>
+        <div class="legend-item">
+            <span class="dot country-dot"></span> Countries
+        </div>
+        <div class="legend-item">
+            <span class="dot city-dot"></span> Major Cities
+        </div>
+    </div>
+
+    <div id="statsBar">
+        <span id="countryCount">195 Countries</span>
+        <span id="cityCount">100+ Major Cities</span>
+    </div>
+
+    <script src="data/countries.js"></script>
+    <script src="data/cities.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
