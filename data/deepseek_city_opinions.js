@@ -231,6 +231,30 @@ const deepseekCityOpinions = {
         underrated: "The ravines and parks that create green corridors through the city.",
         vibe: "Extremely polite multiculturalism occasionally interrupted by hockey."
     },
+    "Vancouver": {
+        hotTake: "A postcard that forgot to include affordable housing in the picture.",
+        bestThing: "Mountains meet ocean meet city in the most dramatic way possible.",
+        worstThing: "The rain that makes Seattle look like a desert.",
+        overrated: "Stanley Park - yes it's nice but it's just a big park.",
+        underrated: "The authentic Asian food scenes in Richmond and Burnaby.",
+        vibe: "Outdoorsy Lululemon model who's secretly stressed about their mortgage."
+    },
+    "Marrakech": {
+        hotTake: "The world's most beautiful sensory overload that occasionally feels like an assault.",
+        bestThing: "The Medina at night - magical if you can handle the chaos.",
+        worstThing: "The constant hassling from shopkeepers and 'guides'.",
+        overrated: "Jemaa el-Fnaa at peak tourist hours - overwhelming in a bad way.",
+        underrated: "The gardens and quiet riads hidden behind unassuming doors.",
+        vibe: "A magic carpet ride where someone's always trying to sell you the carpet."
+    },
+    "Jerusalem": {
+        hotTake: "The weight of three religions' worth of history pressing down on one ancient city.",
+        bestThing: "The layers of history you can literally touch in the Old City walls.",
+        worstThing: "The political tension that makes every stone feel contested.",
+        overrated: "The Western Wall for non-religious visitors - it's just a wall.",
+        underrated: "The modern art and food scene in West Jerusalem.",
+        vibe: "A prayer that's been whispered, shouted, and fought over for millennia."
+    },
     "Kyoto": {
         hotTake: "A city so dedicated to preserving its past it's becoming a museum of itself.",
         bestThing: "The temples and gardens that actually deliver on the peace they promise.",
@@ -238,5 +262,165 @@ const deepseekCityOpinions = {
         overrated: "The bamboo forest - it's one path and a million selfie sticks.",
         underrated: "The northern mountains where you can still find quiet temples.",
         vibe: "A geisha walking through a theme park of her own culture."
+    },
+    "Athens": {
+        hotTake: "An ancient wonder wrapped in modern economic anxiety.",
+        bestThing: "The Acropolis - still breathtaking despite everything.",
+        worstThing: "The graffiti that sometimes feels less like art and more like despair.",
+        overrated: "The Plaka - touristy and overpriced.",
+        underrated: "The alternative neighborhoods like Exarcheia.",
+        vibe: "A philosopher king who's now driving an Uber."
+    },
+    "Lisbon": {
+        hotTake: "Europe's cool kid who might be getting a little too popular for its own good.",
+        bestThing: "The light and those beautiful tiled buildings.",
+        worstThing: "The hills that look charming until you have to climb them.",
+        overrated: "The tram 28 - overcrowded and not worth the wait.",
+        underrated: "The LX Factory and other creative spaces beyond the center.",
+        vibe: "Fado music with a synth beat - old soul, new energy."
+    },
+    "Dublin": {
+        hotTake: "A small town that drank its way into being a capital city.",
+        bestThing: "The pub culture that's about conversation, not just drinking.",
+        worstThing: "The cost of living crisis hitting a city that was always expensive.",
+        overrated: "Temple Bar - where tourists go to pay €8 for a Guinness.",
+        underrated: "The coastal villages like Howth that are technically part of the city.",
+        vibe: "A storyteller who might be embellishing but you don't mind because the story's good."
+    },
+    "Copenhagen": {
+        hotTake: "So perfect it makes you wonder what they're suppressing.",
+        bestThing: "Hygge as a legitimate national pastime.",
+        worstThing: "The prices that make you reconsider your life choices.",
+        overrated: "The Little Mermaid - it's tiny and always crowded.",
+        underrated: "The meatpacking district (Kødbyen) nightlife.",
+        vibe: "A perfectly designed chair that's comfortable but makes you sit up straight."
+    },
+    "Stockholm": {
+        hotTake: "Beauty so restrained it occasionally feels cold.",
+        bestThing: "The archipelago - a city built on islands is always magical.",
+        worstThing: "The Swedish reserve that can be hard to penetrate.",
+        overrated: "The Vasa Museum - it's a cool ship but the museum feels dated.",
+        underrated: "The subway art - each station is unique and stunning.",
+        vibe: "An IKEA showroom that somehow became a functioning city."
+    },
+    "Reykjavik": {
+        hotTake: "A village that became a capital and never quite adjusted.",
+        bestThing: "The proximity to otherworldly nature.",
+        worstThing: "The prices - everything costs twice what it should.",
+        overrated: "The Blue Lagoon - overcrowded and overpriced geothermal pool.",
+        underrated: "The local swimming pools where Icelanders actually hang out.",
+        vibe: "A Viking poet trying to explain TikTok to their ancestors."
+    },
+    "Hanoi": {
+        hotTake: "A city where the 19th, 20th, and 21st centuries are having a fascinating argument.",
+        bestThing: "The street food culture that's a way of life.",
+        worstThing: "The traffic that feels like a video game you didn't agree to play.",
+        overrated: "Water puppet shows - cute but gets old fast.",
+        underrated: "The French colonial architecture in the Old Quarter.",
+        vibe: "A phở broth: complex, simmering for centuries, and always served hot."
+    },
+    "Ho Chi Minh City": {
+        hotTake: "The future of Vietnam arriving at motorcycle speed.",
+        bestThing: "The energy of a city going from 0 to 100.",
+        worstThing: "The heat and humidity that feels like a physical presence.",
+        overrated: "The War Remnants Museum - important but emotionally exhausting.",
+        underrated: "The coffee culture (both traditional and third wave).",
+        vibe: "A startup that just got its series A funding and is moving fast."
+    },
+    "Kuala Lumpur": {
+        hotTake: "A city that can't decide if it's Asian, Islamic, or Western, so it's trying to be all three.",
+        bestThing: "The food fusion that shouldn't work but absolutely does.",
+        worstThing: "The sprawl that makes getting anywhere a chore.",
+        overrated: "The Petronas Towers - nice but the surrounding area is soulless.",
+        underrated: "The street art and indie scene in Bangsar.",
+        vibe: "A modern mosque with a Starbucks in the lobby."
+    },
+    "Manila": {
+        hotTake: "A city of heartbreaking contrasts where billion-dollar condos overlook slums.",
+        bestThing: "The resilience and humor of Filipinos despite everything.",
+        worstThing: "The traffic that makes L.A. look efficient.",
+        overrated: "Intramuros - historical but feels like a sanitized version.",
+        underrated: "The contemporary art scene in Makati.",
+        vibe: "A karaoke bar singing a hopeful song through tears."
+    },
+    "Jakarta": {
+        hotTake: "A city built on swamp that's sinking under its own weight.",
+        bestThing: "The warmth of people who smile through chaos.",
+        worstThing: "The traffic and pollution that literally shorten lives.",
+        overrated: "The malls - yes they're huge but they're just malls.",
+        underrated: "The old town (Kota Tua) on a weekday morning.",
+        vibe: "A motorcycle carrying a family of five through floodwaters, still smiling."
+    },
+    "Nairobi": {
+        hotTake: "The Silicon Savannah trying to grow in rocky soil.",
+        bestThing: "The national park actually within city limits.",
+        worstThing: "The security concerns that create fortress mentalities.",
+        overrated: "The giraffe center - it's basically a petting zoo.",
+        underrated: "The matatu culture (decorated buses) as moving art.",
+        vibe: "A lion wearing a business suit, checking its smartphone."
+    },
+    "Lagos": {
+        hotTake: "Organized chaos that somehow produces billion-dollar businesses.",
+        bestThing: "The hustle culture that creates opportunities from thin air.",
+        worstThing: "The infrastructure that's perpetually playing catch-up.",
+        overrated: "The beaches - nice but the traffic to get there isn't worth it.",
+        underrated: "The tech scene in Yaba (Silicon Lagoon).",
+        vibe: "A Nollywood film set where everyone's the director and star."
+    },
+    "Casablanca": {
+        hotTake: "A city forever compared to a movie it barely resembles.",
+        bestThing: "The Hassan II Mosque - genuinely breathtaking.",
+        worstThing: "The lack of the romanticism the movie promised.",
+        overrated: "Rick's Cafe - a recreation of a fictional bar for tourists.",
+        underrated: "The art deco architecture in the city center.",
+        vibe: "Humphrey Bogart's raincoat in the desert - iconic but impractical."
+    },
+    "Havana": {
+        hotTake: "A city frozen in time, but the ice is melting fast.",
+        bestThing: "The music that seems to come from the walls themselves.",
+        worstThing: "The dual economy that creates absurd inequalities.",
+        overrated: "The vintage cars - charming but often poorly maintained tourist traps.",
+        underrated: "The contemporary art scene in Fábrica de Arte Cubano.",
+        vibe: "A 1950s film slowly buffering into the 21st century."
+    },
+    "Lima": {
+        hotTake: "The world's best food city that nobody talks about enough.",
+        bestThing: "The culinary innovation that honors ancient traditions.",
+        worstThing: "The grey coastal fog that never seems to lift.",
+        overrated: "The Magic Water Circuit - it's just fountains, people.",
+        underrated: "The pre-Columbian ruins right in the city (Huaca Pucllana).",
+        vibe: "A ceviche: fresh, spicy, complex, and constantly evolving."
+    },
+    "Bogotá": {
+        hotTake: "A city that went from dangerous to cool faster than anyone expected.",
+        bestThing: "The street art that turns the city into an open-air gallery.",
+        worstThing: "The traffic that makes mountains out of molehills.",
+        overrated: "Monserrate - nice view but the cable car is always packed.",
+        underrated: "The ciclovía on Sundays when major streets become bike paths.",
+        vibe: "A Gabriel García Márquez novel set to a reggaeton beat."
+    },
+    "Cartagena": {
+        hotTake: "A beautiful colonial fantasy that occasionally forgets it's a real city.",
+        bestThing: "The walled city that actually lives up to the photos.",
+        worstThing: "The cruise ship crowds that descend like locusts.",
+        overrated: "The Getsemaní neighborhood - yes it's cool but it knows it.",
+        underrated: "The islands (Islas del Rosario) just offshore.",
+        vibe: "A salsa dancer in historical costume, sweating but smiling."
+    },
+    "Santiago": {
+        hotTake: "A city with an identity crisis between European order and Latin American chaos.",
+        bestThing: "The backdrop of the Andes - never gets old.",
+        worstThing: "The smog that often hides said Andes.",
+        overrated: "San Cristóbal Hill - it's fine but every Latin American city has one.",
+        underrated: "The wine valleys literally next door.",
+        vibe: "A well-organized spreadsheet with occasional earthquakes."
+    },
+    "Cusco": {
+        hotTake: "A living Inca city turned into a Machu Picchu waiting room.",
+        bestThing: "The blend of Inca stonework and Spanish colonial architecture.",
+        worstThing: "The altitude that makes walking feel like a marathon.",
+        overrated: "The main square - beautiful but overwhelmed by tour groups.",
+        underrated: "The neighborhoods above the city with better views and fewer tourists.",
+        vibe: "An ancient temple with a backpacker hostel built inside."
     }
 };
