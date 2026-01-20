@@ -127,7 +127,14 @@ function showCountryInfo(country) {
     const content = document.getElementById('infoPanelContent');
 
     // Select opinions based on active tab
-    const op = currentTab === 'claude' ? country.opinions : (typeof chatgptOpinions !== 'undefined' ? chatgptOpinions[country.name] : undefined);
+    let op;
+    if (currentTab === 'claude') {
+        op = country.opinions;
+    } else if (currentTab === 'chatgpt') {
+        op = typeof chatgptOpinions !== 'undefined' ? chatgptOpinions[country.name] : undefined;
+    } else if (currentTab === 'gemini') {
+        op = typeof geminiOpinions !== 'undefined' ? geminiOpinions[country.name] : undefined;
+    }
 
     content.innerHTML = `
         <div class="info-header">
@@ -226,7 +233,14 @@ function showCityInfo(city) {
     const content = document.getElementById('infoPanelContent');
 
     // Select opinions based on active tab
-    const op = currentTab === 'claude' ? city.opinions : (typeof chatgptCityOpinions !== 'undefined' ? chatgptCityOpinions[city.name] : undefined);
+    let op;
+    if (currentTab === 'claude') {
+        op = city.opinions;
+    } else if (currentTab === 'chatgpt') {
+        op = typeof chatgptCityOpinions !== 'undefined' ? chatgptCityOpinions[city.name] : undefined;
+    } else if (currentTab === 'gemini') {
+        op = typeof geminiCityOpinions !== 'undefined' ? geminiCityOpinions[city.name] : undefined;
+    }
 
     content.innerHTML = `
         <div class="info-header">
