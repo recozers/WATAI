@@ -240,6 +240,41 @@ body {
     color: #718096;
 }
 
+/* Tab Container */
+#tabContainer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(99, 179, 237, 0.3);
+    border-radius: 20px;
+    color: #a0aec0;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: #63b3ed;
+    color: #e2e8f0;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, rgba(99, 179, 237, 0.3), rgba(66, 153, 225, 0.3));
+    border-color: #63b3ed;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(99, 179, 237, 0.3);
+}
+
 /* Legend */
 #legend {
     position: fixed;

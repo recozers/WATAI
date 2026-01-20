@@ -1,3 +1,6 @@
+// Current active tab (claude or chatgpt)
+let currentTab = 'claude';
+
 // Country name mapping (TopoJSON name -> our data name)
 const countryNameMap = {
     "United States of America": "United States",
@@ -123,6 +126,9 @@ function showCountryInfo(country) {
     const panel = document.getElementById('infoPanel');
     const content = document.getElementById('infoPanelContent');
 
+    // Select opinions based on active tab
+    const op = currentTab === 'claude' ? country.opinions : (typeof chatgptOpinions !== 'undefined' ? chatgptOpinions[country.name] : undefined);
+
     content.innerHTML = `
         <div class="info-header">
             <div class="flag">${country.flag}</div>
@@ -180,32 +186,32 @@ function showCountryInfo(country) {
             </ul>
         </div>
 
-        ${country.opinions ? `
+        ${(currentTab === 'claude' ? country.opinions : op) ? `
         <div class="info-section opinions-section">
             <h3>Honest Takes</h3>
             <div class="opinion-item">
                 <div class="opinion-label">Hot Take</div>
-                <div class="opinion-value">${country.opinions.hotTake}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? country.opinions.hotTake : (op?.hotTake || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Best Thing</div>
-                <div class="opinion-value positive">${country.opinions.bestThing}</div>
+                <div class="opinion-value positive">${currentTab === 'claude' ? country.opinions.bestThing : (op?.bestThing || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Worst Thing</div>
-                <div class="opinion-value negative">${country.opinions.worstThing}</div>
+                <div class="opinion-value negative">${currentTab === 'claude' ? country.opinions.worstThing : (op?.worstThing || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Overrated</div>
-                <div class="opinion-value">${country.opinions.overrated}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? country.opinions.overrated : (op?.overrated || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Underrated</div>
-                <div class="opinion-value">${country.opinions.underrated}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? country.opinions.underrated : (op?.underrated || '')}</div>
             </div>
             <div class="opinion-item vibe">
                 <div class="opinion-label">The Vibe</div>
-                <div class="opinion-value">${country.opinions.vibe}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? country.opinions.vibe : (op?.vibe || '')}</div>
             </div>
         </div>
         ` : ''}
@@ -218,6 +224,9 @@ function showCountryInfo(country) {
 function showCityInfo(city) {
     const panel = document.getElementById('infoPanel');
     const content = document.getElementById('infoPanelContent');
+
+    // Select opinions based on active tab
+    const op = currentTab === 'claude' ? city.opinions : (typeof chatgptCityOpinions !== 'undefined' ? chatgptCityOpinions[city.name] : undefined);
 
     content.innerHTML = `
         <div class="info-header">
@@ -264,32 +273,32 @@ function showCityInfo(city) {
             <p class="info-text">${city.famousFor}</p>
         </div>
 
-        ${city.opinions ? `
+        ${(currentTab === 'claude' ? city.opinions : op) ? `
         <div class="info-section opinions-section">
             <h3>Honest Takes</h3>
             <div class="opinion-item">
                 <div class="opinion-label">Hot Take</div>
-                <div class="opinion-value">${city.opinions.hotTake}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? city.opinions.hotTake : (op?.hotTake || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Best Thing</div>
-                <div class="opinion-value positive">${city.opinions.bestThing}</div>
+                <div class="opinion-value positive">${currentTab === 'claude' ? city.opinions.bestThing : (op?.bestThing || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Worst Thing</div>
-                <div class="opinion-value negative">${city.opinions.worstThing}</div>
+                <div class="opinion-value negative">${currentTab === 'claude' ? city.opinions.worstThing : (op?.worstThing || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Overrated</div>
-                <div class="opinion-value">${city.opinions.overrated}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? city.opinions.overrated : (op?.overrated || '')}</div>
             </div>
             <div class="opinion-item">
                 <div class="opinion-label">Underrated</div>
-                <div class="opinion-value">${city.opinions.underrated}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? city.opinions.underrated : (op?.underrated || '')}</div>
             </div>
             <div class="opinion-item vibe">
                 <div class="opinion-label">The Vibe</div>
-                <div class="opinion-value">${city.opinions.vibe}</div>
+                <div class="opinion-value">${currentTab === 'claude' ? city.opinions.vibe : (op?.vibe || '')}</div>
             </div>
         </div>
         ` : ''}
@@ -446,6 +455,23 @@ globe
     .arcDashLength(0.5)
     .arcDashGap(0.2)
     .arcDashAnimateTime(3000);
+
+// Tab switching functionality
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Update active tab state
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentTab = btn.dataset.tab;
+
+        // If panel is open, refresh it to show/hide hot takes
+        const panel = document.getElementById('infoPanel');
+        if (!panel.classList.contains('hidden')) {
+            // Close panel when switching tabs to avoid confusion
+            panel.classList.add('hidden');
+        }
+    });
+});
 
 console.log('World Explorer initialized!');
 console.log(`Loaded ${countriesData.length} countries and ${citiesData.length} cities.`);
