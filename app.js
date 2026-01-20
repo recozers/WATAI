@@ -134,6 +134,8 @@ function showCountryInfo(country) {
         op = typeof chatgptOpinions !== 'undefined' ? chatgptOpinions[country.name] : undefined;
     } else if (currentTab === 'gemini') {
         op = typeof geminiOpinions !== 'undefined' ? geminiOpinions[country.name] : undefined;
+    } else if (currentTab === 'grok') {
+        op = typeof grokOpinions !== 'undefined' ? grokOpinions[country.name] : undefined;
     }
 
     content.innerHTML = `
@@ -240,6 +242,8 @@ function showCityInfo(city) {
         op = typeof chatgptCityOpinions !== 'undefined' ? chatgptCityOpinions[city.name] : undefined;
     } else if (currentTab === 'gemini') {
         op = typeof geminiCityOpinions !== 'undefined' ? geminiCityOpinions[city.name] : undefined;
+    } else if (currentTab === 'grok') {
+        op = typeof grokCityOpinions !== 'undefined' ? grokCityOpinions[city.name] : undefined;
     }
 
     content.innerHTML = `
